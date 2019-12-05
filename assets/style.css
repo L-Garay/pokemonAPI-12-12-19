@@ -1,0 +1,33 @@
+body {
+  height: 100%;
+}
+
+main {
+  height: 100vh;
+}
+
+.lists {
+  max-height: 50vh;
+}
+
+#poke-list {
+  max-height: 50vh;
+  display: flex;
+  overflow-y: scroll;
+}
+
+#caught-list {
+  max-height: 50vh;
+  display: flex;
+  overflow-y: scroll;
+}
+
+#pokemon-info {
+  height: 30vh;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
