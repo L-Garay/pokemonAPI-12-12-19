@@ -52,7 +52,6 @@ class PokemonsService {
     );
     let pokemon = store.State.caughtPokemon;
     console.log(pokemon);
-    debugger;
     store.commit("nextPokemonUrl", res.data.next);
     store.commit("previousPokemonUrl", res.data.previous);
   }
@@ -68,11 +67,14 @@ class PokemonsService {
       res.data.results.map(p => new BasicPokemon(p))
     );
     store.commit("nextPokemonUrl", res.data.next);
-    store.commit("previousPokemonUrl", res.data.prevoius);
+    store.commit("previousPokemonUrl", res.data.previous);
+    let previous = store.State.previousPokemonUrl;
+    console.log(previous);
   }
 
   async getPreviousPokemon() {
     let res = await _pokeAPi.get(store.State.previousPokemonUrl);
+    debugger;
     store.commit(
       "pokemons",
       res.data.results.map(p => new BasicPokemon(p))

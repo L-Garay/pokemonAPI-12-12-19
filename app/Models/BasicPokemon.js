@@ -8,7 +8,6 @@ export default class BasicPokemon {
     return `
     <div class="col-6" onclick="app.pokemonsController.getAPokemon('${this.url}')">${this.name}
     </div>
-    
     `;
   }
 }
