@@ -46,6 +46,7 @@ class PokemonsService {
 
   async getPokemon() {
     let res = await _pokeAPi.get("pokemon?limit=100");
+    debugger;
     store.commit(
       "pokemons",
       res.data.results.map(p => new BasicPokemon(p))
